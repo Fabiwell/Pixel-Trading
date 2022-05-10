@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+.pixelnav{
+    display: flex;
+    width: 100%;
+    height: 75px;
+    color: white;
+    background-color: #16DB65;
+    justify-content: center;
+    margin-right: 10px;
+    border: solid white 1px;
+
+}
+.pixelnav1{
+    border: 1px white solid;
+    width: 100px;
+    text-align: center;
+    
+    
+    
+    
+}
+.pixelnav2{
+    text-align: center;
+    border: 1px white solid;
+    width: 100px;
+    
+}
+.pixelnav3{
+    text-align: center;
+    border: 1px white solid;
+    width: 100px;
+    
+}
+.pixelnav4{
+    text-align: center;
+    border: 1px white solid;
+    width: 100px;
+    
+}
