@@ -1,3 +1,19 @@
+<?php
+
+    include('inc/functions.php');
+
+    if ($_POST && isset($_POST["submit"])) 
+    {
+        unset($_POST["submit"]);
+    
+        // Code that only executes when submit is pressed
+        log_in();
+
+        // echo "bobo";
+        header("Refresh:0");
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,9 +27,8 @@
 <body>
     <form action="login.php" method="POST">
         <input type="email" name="logmail" placeholder="E-Mail" id="email">
-        <input type="password" name="logpassword" id="password" placeholder="Password">
-        <input id='show'type="checkbox">
-    <input type="submit" value="Send" name="submit">
-</form>
+        <input type="password" name="logpass" id="password" placeholder="Password">
+        <input type="submit" value="Send" name="submit">
+    </form>
 </body>
 </html>
