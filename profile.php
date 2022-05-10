@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-
+    <h1>Profile</h1>
+    <div class="profilepic">
+        <h2>Change Profile Picture</h2>
+        <img src="images/blank-profile-picture-973460_1280.png" width="200" height="200">
+    </div>
 </body>
 </html>
