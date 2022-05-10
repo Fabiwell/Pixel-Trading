@@ -47,9 +47,15 @@ function navBar(){
     ?>
     <div class="pixelnav"> <!-- nav -->
         <div class="pixelnavs"><a href="index.php">Home</a></div>
-        <div class="pixelnavs"><a href="login.php">Login</a></div>
+        <div class="pixelnavs"><a href="">...</a></div>
         <div class="pixelnavs"><a href="profile.php">Profile</a></div>
-        <div class="pixelnavs"><a href="logout.php">Logout</a></div>
+        <?php
+        if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
+            ?>
+            <div class="pixelnavs"><a href="logout.php">Logout</a></div>
+            <?php
+        }
+        ?>
         <div class="pixellogo"> <img src="images/pixel trading.png"></div>
     </div>
     <?php
