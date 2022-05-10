@@ -9,9 +9,9 @@
 </head>
 <body>
     <div class="pixelnav"> <!-- nav -->
-        <div class="pixelnav1">Home</div>
+        <div class="pixelnav1"><a href="index.php">Home</a></div>
         <div class="pixelnav2"><a href="login.php">Login</a></div>
-        <div class="pixelnav3">...</div>
+        <div class="pixelnav3"><a href="profile.php">Profile</a></div>
         <div class="pixelnav4">...</div>
         <div class="pixellogo"> <img src="images/pixel trading.png"></div>
         
