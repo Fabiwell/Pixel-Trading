@@ -14,30 +14,12 @@ body{
     border: solid white 1px;
 
 }
-.pixelnav1{
+.pixelnavs{
     border: 1px white solid;
     width: 100px;
     text-align: center;
-    
-    
-    
-    
 }
-.pixelnav2{
-    text-align: center;
-    border: 1px white solid;
-    width: 100px;
-    
-}
-.pixelnav3{
-    text-align: center;
-    border: 1px white solid;
-    width: 100px;
-    
-}
-.pixelnav4{
-    text-align: center;
-    border: 1px white solid;
-    width: 100px;
-    
+
+h1{
+    color: white;
 }

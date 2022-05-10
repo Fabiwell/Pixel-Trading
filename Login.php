@@ -10,7 +10,7 @@
         log_in();
 
         // echo "bobo";
-        header("Refresh:0");
+        //header("Refresh:0");
     }
 
 ?>

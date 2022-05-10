@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+
 function db(){
     $host = "localhost";
     $user = "root";
@@ -17,15 +20,16 @@ function db(){
 function log_in(){
     $conn = db();
 
-    if(!isset($_SESSION['loggedIn'])){
-        $_SESSION['loggedIn'] = false;
-    }
-
     extract($_POST);
 
     $sql = 'SELECT `email`, `password` FROM `account`';
 
     $results = $conn->query($sql);
+
+    if(!isset($_SESSION['loggedIn'])){
+        $_SESSION['loggedIn'] = false;
+    }
+
 
     while($row = $results->fetch_assoc())
     {
@@ -38,6 +42,23 @@ function log_in(){
             break;
         }
     }
+}
+function navBar(){
+    ?>
+    <div class="pixelnav"> <!-- nav -->
+        <div class="pixelnavs"><a href="index.php">Home</a></div>
+        <div class="pixelnavs"><a href="">...</a></div>
+        <div class="pixelnavs"><a href="profile.php">Profile</a></div>
+        <?php
+        if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
+            ?>
+            <div class="pixelnavs"><a href="logout.php">Logout</a></div>
+            <?php
+        }
+        ?>
+        <div class="pixellogo"> <img src="images/pixel trading.png"></div>
+    </div>
+    <?php
 }
 
 

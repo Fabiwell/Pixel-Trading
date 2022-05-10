@@ -1,3 +1,7 @@
+<?php
+    include('inc/functions.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +12,21 @@
     <link rel="stylesheet" href="css/stylesheet.css"> 
 </head>
 <body>
-    <div class="pixelnav"> <!-- nav -->
-        <div class="pixelnav1"><a href="index.php">Home</a></div>
-        <div class="pixelnav2"><a href="login.php">Login</a></div>
-        <div class="pixelnav3"><a href="profile.php">Profile</a></div>
-        <div class="pixelnav4">...</div>
-        <div class="pixellogo"> <img src="images/pixel trading.png"></div>
+    
+    <?php
+    if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
+        navBar();
+        ?>
         
-    </div>
+        <?php
+    }
+    else{
+        navBar();
+        ?> 
+        <div class="pixelnavs"><a href="Login.php">Login</a></div>
+        <div class="pixelnavs"><a href="">Make Account</a></div>
+        <?php
+    }
+    ?>
 </body>
 </html>
