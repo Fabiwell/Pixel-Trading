@@ -18,7 +18,7 @@ function log_in(){
     $conn = db();
 
     if(!isset($_SESSION['loggedIn'])){
-        $_SESSION['loggedIn'] = false;
+        $_SESSION['logged'] = false;
     }
 
     extract($_POST);

@@ -14,7 +14,19 @@
         <div class="pixelnav3"><a href="profile.php">Profile</a></div>
         <div class="pixelnav4">...</div>
         <div class="pixellogo"> <img src="images/pixel trading.png"></div>
-        
     </div>
+    <?php
+    if($_SESSION['logged'] == true){
+        ?>
+        logged in
+        <?php
+    }
+    else{
+        ?> 
+        <h1>logged out</h1>
+
+        <?php
+    }
+    ?>
 </body>
 </html>
