@@ -322,7 +322,7 @@ a:active {
   padding: 15px;
 }
 
-/* .form-popup {
+.form-popup {
   display: none;
   position: center;
   bottom: 0;
@@ -330,7 +330,7 @@ a:active {
   width: 300px;
   border-radius: 8px;
   z-index: 3;
-} */
+} 
 
 .form-container {
   width: 300px;
@@ -381,16 +381,6 @@ a:active {
 .open-button:hover {
   opacity: 1;
 }
-
-/*   background-color: #04471C;
-  position: absolute;
-  border: 1px solid #16DB65;
-  width: 1000px;
-  left: 250PX;
-  height: 790px;
-  border-radius: 40px;
-  z-index: 1; */
-
 
 .btnPfPage {
   background-color: #16DB65;

@@ -23,7 +23,7 @@
 }
 function openForm() {
   document.getElementById("myForm").style.display = "block"
- event.preventDefault();
+  event.preventDefault();
 }
 
 function closeForm() {
