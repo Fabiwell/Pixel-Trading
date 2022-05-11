@@ -145,7 +145,7 @@ a:link, a:visited {
     right: 20px;
 }
 
-.profilepic {
+#profilepic {
     border-radius: 50%;
 }
 

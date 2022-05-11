@@ -47,8 +47,10 @@
 //        elem.dispatchEvent(evt);
 //     }
 // }
-function changepfp();{
-  document.getElementById("myImageId").src="upload/<?php echo($filename)?>";
+
+if(document. getElementById('buttonupload'). clicked == true)
+{
+  document.getElementById("profilepic").src="upload/<?php echo($filename)?>";
 }
 
 
@@ -74,7 +76,7 @@ function closeForm() {
     <h1>Profile</h1>
     <div class="profile">
         <h2>Change Profile Picture</h2>
-        <img class="profilepic" src="images/blank-profile-picture-973460_1280.png" width="255" height="255">
+        <img id="profilepic" src="images/blank-profile-picture-973460_1280.png" width="255" height="255">
     </div>
     <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
@@ -104,7 +106,7 @@ function closeForm() {
         <form method="POST" action="profile.php" enctype="multipart/form-data">
         <input id="button" type="submit" name="btnChangePass" value="Change Password" onclick="openForm()">
         <input id="button" type="submit" name="btnDeleteAcc" value="Delete Account" onclick="Delete()">
-        <input id="button" type="submit" name="upload" value="Change Profile Picture" onclick="changepfp()">
+        <input id="buttonupload" type="submit" name="upload" value="Change Profile Picture">
         <input type="file" name="image-input" accept="image/jpeg, image/png, image/jpg">
         </form>
 </div>
