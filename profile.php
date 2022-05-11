@@ -28,7 +28,8 @@
         <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
     </div>
     <div class="Settings">
-        <h2>Information</h2>
+        <h2>Information</h2> 
+        <!-- iemand die back end doet moet even zorgen dat de correcte text hier komt te staan -Stan -->
         <h5>E-mail</h5>
         <h5>Password</h5>
         <h5>Account Age</h5>
