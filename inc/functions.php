@@ -157,9 +157,9 @@ function deleteAcc(){
 ///////////////////
 function pop_up_password(){
   ?>
-  <div class="form-popup" id="pop">
+  <div class="form-popup" id="myForm">
     <form action="/action_page.php" class="form-container">
-      <h1>Login</h1>
+      <h1>New Password</h1>
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Old Password" name="psw" required>
@@ -170,7 +170,7 @@ function pop_up_password(){
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Confirm Password" name="psw" required>
 
-      <button type="submit" class="btn">Login</button>
+      <button type="submit" class="btn">Confirm</button>
       <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </form>
   </div>
