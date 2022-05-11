@@ -21,7 +21,13 @@
        elem.dispatchEvent(evt);
     }
 }
- 
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
 </script>
 
 <!DOCTYPE html>
@@ -42,6 +48,23 @@
         </a>
         <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
     </div>
+    <div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Old Password</b></label>
+    <input type="text" placeholder="Old Password" name="psw" required>
+
+    <label for="psw"><b>New Password</b></label>
+    <input type="password" placeholder="New Password" name="psw" required>
+    
+    <label for="psw"><b>Confirm New Password</b></label>
+    <input type="password" placeholder="Confirm New Password" name="psw" required>
+
+    <button type="submit" class="btn">Confirm Change</button>
+    <button type="button" class="btn cancel" onclick=")">Cancel</button>
+  </form>
+</div>
     <div class="Settings">
         <div class="Information">
         <h2>Information</h2> 
@@ -51,7 +74,7 @@
         <h5>Account Age</h5>
         <h2>Settings</h2>
         <form method="POST" action="profile.php">
-        <input id="button" type="submit" name="btnChangePass" value="Change Password">
+        <input id="button" type="submit" name="btnChangePass" value="Change Password" onclick="openForm()">
         <input id="button" type="submit" name="btnDeleteAcc" value="Delete Account" onclick="Delete()">
         <input id="button" type="submit" name="btnChangePfp" value="Change Profile Picture">
         </form>

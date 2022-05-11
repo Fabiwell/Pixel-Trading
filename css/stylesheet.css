@@ -62,6 +62,7 @@ a:link, a:visited {
     left: 250PX;
     height: 790px;
     border-radius: 40px;
+    z-index: 1;
   }
 
   #button {
@@ -78,3 +79,56 @@ a:link, a:visited {
 .Information {
     padding: 15px;
 }
+
+.form-popup {
+    display: none;
+    position: center;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #16DB65;
+    width: 300px;
+    border-radius: 8px;
+    z-index: 3;
+  }
+
+  .form-container {
+    width: 300px;
+    padding: 10px;
+    background-color: #04AA6D;
+    border-radius: 4px;
+    z-index: 2;
+    align-self: center;
+    position: absolute;
+  }
+
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  .form-container .btn {
+    background-color: #00ff55;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+
+  .form-container .cancel {
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
