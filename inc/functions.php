@@ -17,6 +17,10 @@ function db(){
     
     return $mysqli;
 }
+
+//////////
+//Log In//
+//////////
 function log_in(){
     $conn = db();
 
@@ -43,6 +47,10 @@ function log_in(){
         }
     }
 }
+
+///////////
+//Nav Bar//
+//////////
 function navBar(){
     ?>
     <div class="pixelnav"> <!-- nav -->
@@ -61,6 +69,28 @@ function navBar(){
     <?php
 }
 
+////////////////
+//make Account//
+////////////////
+function createAcc(){
+    $conn = db();
+    
+    extract($_POST);
+
+    $password = hash('sha1', $accpass);
+    $money = 100;
+    $date = (new DateTime('now'))->format('Y-m-d H:i:s');
+    $sql = "INSERT INTO `account`(`id`, `firstname`, `lastname`, `email`, `password`, `date_time`, `currency`) 
+            VALUES ('null','$accFN','$accLN','$accmail', '$password', '$date', '$money')";
+
+    //if(mysqli_query($conn, $sql)){}
+    $results = $conn->query($sql);
+    header('Location: index.php');
+}
+
+/////////////////
+/////////////////
+/////////////////
 
 
 
