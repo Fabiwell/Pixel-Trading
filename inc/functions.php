@@ -100,8 +100,8 @@ function navBar(){
           else{
               ?>
               
-              <a class="navbar-content" href="Login.php">Login</a>
-              <a class="navbar-content" href="create_acc.php">Make Account</a>
+              <a class="navbar-account" href="Login.php">Login</a>
+              <a class="navbar-account" href="create_acc.php">Make Account</a>
               <?php
           }
         ?> 

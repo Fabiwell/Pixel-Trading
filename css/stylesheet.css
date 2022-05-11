@@ -21,10 +21,6 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-
-  justify-content: center;
-
-
 }
 
 /* The dropdown container */
@@ -107,7 +103,14 @@ body {
   display: table;
   clear: both;
 }
-
+.navbar-account{
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 #logo {
   display: flex;
   width: 46.5px;
@@ -140,17 +143,6 @@ h5 {
   color: white;
 }
 
-a:link,
-a:visited {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover,
-a:active {
-  color: white;
-  text-decoration: none;
-}
 
 #btnLogout {
   position: absolute;
@@ -179,7 +171,7 @@ a:active {
 
 /* Add a red background color to navbar links on hover */
 .navbar-content:hover,
-.dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn, .navbar-account:hover {
   background-color: #16Db65;
 
 }
