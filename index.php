@@ -24,7 +24,10 @@
         navBar();
         ?> 
         <div class="pixelnavs"><a href="Login.php">Login</a></div>
-        <div class="pixelnavs"><a href="">Make Account</a></div>
+        <div class="pixelnavs"><a href="create_acc.php">Make Account</a></div>
+
+        
+
         <?php
     }
     ?>
