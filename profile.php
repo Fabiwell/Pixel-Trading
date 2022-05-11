@@ -20,7 +20,18 @@
        evt.initEvent("click", true, false);
        elem.dispatchEvent(evt);
     }
+}
+function openForm() {
+  document.getElementById("myForm").style.display = "block"
+ event.preventDefault();
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
   }
+
 </script>
 
 <!DOCTYPE html>
@@ -41,6 +52,12 @@
         </a>
         <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
     </div>
+
+
+<!--     <button type="submit" class="btn">Confirm Change</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+  </form>
+</div> -->
 
     <div class="Settings">
 
