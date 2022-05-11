@@ -28,6 +28,7 @@
         <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
     </div>
     <div class="Settings">
+        <div class="Information">
         <h2>Information</h2> 
         <!-- iemand die back end doet moet even zorgen dat de correcte text hier komt te staan -Stan -->
         <h5>E-mail</h5>
@@ -37,6 +38,7 @@
         <button id="button" type="button">Change Password</button>
         <button id="button" type="button">Delete Account</button>
         <button id="button" type="button">Change Profile Picture</button>
+</div>
 </div>
 </body>
 </html>
