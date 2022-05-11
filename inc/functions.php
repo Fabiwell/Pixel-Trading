@@ -26,7 +26,7 @@ function log_in(){
 
     extract($_POST);
 
-    $sql = 'SELECT `email`, `password`, `id` FROM `account`';
+    $sql = 'SELECT `email`, `password`, `id`, `currency` FROM `account`';
 
     $results = $conn->query($sql);
 
@@ -43,6 +43,7 @@ function log_in(){
             $_SESSION['email'] = $row['email'];
             $_SESSION['password'] = $row['password'];
             $_SESSION['id'] = $row['id'];
+            $_SESSION['currency'] = $row['currency'];
             header('Location: index.php');
             break;
         }
@@ -62,6 +63,7 @@ function navBar(){
             ?>
             <div class="pixelnavs"><a href="profile.php">Profile</a></div>
             <div class="pixelnavs"><a href="logout.php">Logout</a></div>
+            <div class="pixelnavs"><?=$_SESSION['currency']?></div>
             <?php
         }
         ?>
@@ -96,6 +98,8 @@ function wallet(){
     $conn = db();
 
     extract($_POST);
+
+    
     
 }
 //////////////////
