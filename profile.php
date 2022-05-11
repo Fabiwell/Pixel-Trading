@@ -62,7 +62,7 @@ function closeForm() {
     <input type="password" placeholder="Confirm New Password" name="psw" required>
 
     <button type="submit" class="btn">Confirm Change</button>
-    <button type="button" class="btn cancel" onclick=")">Cancel</button>
+    <button type="button" class="btn cancel" onclick="">Cancel</button>
   </form>
 </div>
     <div class="Settings">

@@ -107,22 +107,13 @@ h1{
   }
   #logo{
       display: flex;
-      width: 50px;
-      height: 50px;
+      width: 46.5px;
+      height: 46.5px;
       position: absolute;
       right: 10px;
+      border-radius: 100%;
       
   }
-
-
-
-=======
-    background-color: #16DB65;
-    justify-content: center;
-    margin-right: 10px;
-    border: solid white 1px;
-
-}
 .pixelnavs{
     border: 1px white solid;
     width: 100px;
@@ -144,12 +135,12 @@ h5{
 }
 
 a:link, a:visited {
- color: black;
+ color: white ;
  text-decoration: none;
   }
   
   a:hover, a:active {
-    color: black;
+    color: white;
     text-decoration: none;
   }
 

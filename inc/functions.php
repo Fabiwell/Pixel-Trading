@@ -55,17 +55,49 @@ function log_in(){
 function navBar(){
     ?>
     <div class="pixelnav"> <!-- nav -->
-        <div class="pixelnavs"><a href="index.php">Home</a></div>
-        <div class="pixelnavs"><a href="">...</a></div>
+    <div class="navbar">
+
+        <a href="index.php">Home</a>
+        <a href="">About</a>
+        <a href="Contact">Contact</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">Categories
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="header">
+              <h2>Mega Menu</h2>
+            </div>
+            <div class="row">
+              <div class="column">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"> <h3>NFT</h3></a>
+              </div>
+              <div class="column">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><h3>Electronics</h3></a>
+              </div>
+              <div class="column">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><h3>Pokemon Cards</h3></a>
+              </div>
+            </div>
+          </div>
+        </div>
         <?php
         if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
             ?>
-            <div class="pixelnavs"><a href="profile.php">Profile</a></div>
-            <div class="pixelnavs"><a href="logout.php">Logout</a></div>
+            <a href="logout.php">Logout</a>
+            <img href="profile.php"id="logo" src="images/pixel trading.png">
             <?php
         }
-        ?>
-        <div class="pixellogo"> <img src="images/pixel trading.png"></div>
+        else{
+            ?>
+            
+            <a href="Login.php">Login</a>
+            <a href="create_acc.php">Make Account</a>
+            <?php
+        }
+        ?> 
+      </div>
     </div>
     <?php
 }
