@@ -1,26 +1,57 @@
 <?php
-    include('inc/functions.php');
- 
-    if (isset($_POST["btnDeleteAcc"])) 
-    {
-        unset($_POST["btnDeleteAcc"]);
+  include('inc/functions.php');
 
-        // Code that only executes when submit is pressed
-        deleteAcc();
+  if (isset($_POST["btnDeleteAcc"])) 
+  {
+      unset($_POST["btnDeleteAcc"]);
 
-        header("Refresh:0");
-    }
+      // Code that only executes when submit is pressed
+      deleteAcc();
+
+      header("Refresh:0");
+  }
+
+  $msg = "";
+  $db = mysqli_connect("localhost", "root", "", "pixel_trading");
+  // If upload button is clicked ...
+  if (isset($_POST['upload'])) {
+
+    $filename = $_FILES["image-input"]["name"];
+    $tempname = $_FILES["image-input"]["tmp_name"];   
+        $folder = "upload/".$filename;
+        
+    
+
+        // Get all the submitted data from the form
+        $sql = "INSERT INTO upload (filename) VALUES ('$filename')";
+
+        // Execute query
+        mysqli_query($db, $sql);
+        
+        // Now let's move the uploaded image into the folder: image
+        if (move_uploaded_file($tempname, $folder))  {
+            $msg = "Image uploaded successfully";
+        }else{
+            $msg = "Failed to upload image";
+      }
+  }
+  $result = mysqli_query($db, "SELECT * FROM upload");
 
 ?>
 <script>
-    function performClick(elemId) {
-    var elem = document.getElementById(elemId);
-    if(elem && document.createEvent) {
-       var evt = document.createEvent("MouseEvents");
-       evt.initEvent("click", true, false);
-       elem.dispatchEvent(evt);
-    }
+//     function performClick(elemId) {
+//     var elem = document.getElementById(elemId);
+//     if(elem && document.createEvent) {
+//        var evt = document.createEvent("MouseEvents");
+//        evt.initEvent("click", true, false);
+//        elem.dispatchEvent(evt);
+//     }
+// }
+function changepfp();{
+  document.getElementById("myImageId").src="upload/<?php echo($filename)?>";
 }
+
+
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
@@ -43,10 +74,7 @@ function closeForm() {
     <h1>Profile</h1>
     <div class="profile">
         <h2>Change Profile Picture</h2>
-        <a href="#" onclick="performClick('image-input');">
-            <img class="profilepic" src="images/blank-profile-picture-973460_1280.png" width="255" height="255">
-        </a>
-        <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+        <img class="profilepic" src="images/blank-profile-picture-973460_1280.png" width="255" height="255">
     </div>
     <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
@@ -73,10 +101,11 @@ function closeForm() {
         <h5>Password</h5>
         <h5>Account Age</h5>
         <h2>Settings</h2>
-        <form method="POST" action="profile.php">
+        <form method="POST" action="profile.php" enctype="multipart/form-data">
         <input id="button" type="submit" name="btnChangePass" value="Change Password" onclick="openForm()">
         <input id="button" type="submit" name="btnDeleteAcc" value="Delete Account" onclick="Delete()">
-        <input id="button" type="submit" name="btnChangePfp" value="Change Profile Picture">
+        <input id="button" type="submit" name="upload" value="Change Profile Picture" onclick="changepfp()">
+        <input type="file" name="image-input" accept="image/jpeg, image/png, image/jpg">
         </form>
 </div>
 </div>
