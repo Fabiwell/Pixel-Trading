@@ -16,7 +16,7 @@
 
     <div class="pixelproductmain">
             
-        </div>
+    </div>
 
     
     <?php

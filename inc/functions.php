@@ -86,14 +86,9 @@ function navBar(){
         <?php
         if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
             ?>
-<<<<<<< HEAD
             <a href="logout.php">Logout</a>
+            <a href=""><?=$_SESSION['currency']?></a> 
             <img href="profile.php"id="logo" src="images/pixel trading.png">
-=======
-            <div class="pixelnavs"><a href="profile.php">Profile</a></div>
-            <div class="pixelnavs"><a href="logout.php">Logout</a></div>
-            <div class="pixelnavs"><?=$_SESSION['currency']?></div>
->>>>>>> 6755004fd94cb186466e12ecf27355091991b538
             <?php
         }
         else{
