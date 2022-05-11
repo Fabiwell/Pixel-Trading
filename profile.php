@@ -1,3 +1,17 @@
+<?php
+    include('inc/functions.php');
+ 
+    if (isset($_POST["btnDeleteAcc"])) 
+    {
+        unset($_POST["btnDeleteAcc"]);
+
+        // Code that only executes when submit is pressed
+        deleteAcc();
+
+        header("Refresh:0");
+    }
+
+?>
 <script>
     function performClick(elemId) {
     var elem = document.getElementById(elemId);
@@ -6,7 +20,8 @@
        evt.initEvent("click", true, false);
        elem.dispatchEvent(evt);
     }
- }
+}
+ 
 </script>
 
 <!DOCTYPE html>
@@ -33,9 +48,11 @@
         <h5>Password</h5>
         <h5>Account Age</h5>
         <h2>Settings</h2>
-        <button id="button" type="button">Change Password</button>
-        <button id="button" type="button">Delete Account</button>
-        <button id="button" type="button">Change Profile Picture</button>
+        <form method="POST" action="profile.php">
+        <input id="button" type="submit" name="btnChangePass" value="Change Password">
+        <input id="button" type="submit" name="btnDeleteAcc" value="Delete Account" onclick="Delete()">
+        <input id="button" type="submit" name="btnChangePfp" value="Change Profile Picture">
+        </form>
 </div>
 </body>
 </html>
