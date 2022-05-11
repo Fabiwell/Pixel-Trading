@@ -22,7 +22,8 @@
     }
 }
 function openForm() {
-  document.getElementById("myForm").style.display = "block";
+  document.getElementById("myForm").style.display = "block"
+ event.preventDefault();
 }
 
 function closeForm() {

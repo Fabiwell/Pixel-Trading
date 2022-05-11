@@ -15,11 +15,17 @@ h1{
   }
   
   /* Links inside the navbar */
-  .navbar-content{
+  .navbar a {
     float: left;
     font-size: 16px;
+    color: white;
     text-align: center;
     padding: 14px 16px;
+    text-decoration: none;
+    
+    justify-content: center;
+    
+    
   }
   
   /* The dropdown container */
@@ -115,13 +121,12 @@ h1{
     background-color: #16DB65;
 }
 
-
-h1{
+h2{
     color: white;
 }
 
-h2{
-    color: white;
+h3 {
+  color: white;
 }
 
 h5{
@@ -193,6 +198,7 @@ a:link, a:visited {
     z-index: 2;
     align-self: center;
     position: absolute;
+    top: 0;
   }
 
   .form-container input[type=text], .form-container input[type=password] {
