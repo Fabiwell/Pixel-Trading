@@ -1,3 +1,7 @@
+<?php
+    include('inc/functions.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +12,7 @@
     <link rel="stylesheet" href="css/stylesheet.css"> 
 </head>
 <body>
+
 <div class="navbar">
         <a href="#home">Home</a>
         <a href="#news">About</a>
@@ -42,5 +47,26 @@
     <div class="pixelproductmain">
             
         </div>
+
+    
+    <?php
+    if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
+        navBar();
+        ?>
+        
+        <?php
+    }
+    else{
+        navBar();
+        ?> 
+        <div class="pixelnavs"><a href="Login.php">Login</a></div>
+        <div class="pixelnavs"><a href="create_acc.php">Make Account</a></div>
+
+        
+
+        <?php
+    }
+    ?>
+
 </body>
 </html>
