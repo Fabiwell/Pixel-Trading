@@ -92,7 +92,7 @@ function navBar(){
 
           if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
             ?>
-              <a class="navbar-content" href="logout.php">Logout</a>
+              <a class="navbar-content" id="btnLogout" href="logout.php">Logout</a>
               <a class="navbar-content" href=""><?=$_SESSION['currency']?></a> 
               <a href="profile.php"><img href="profile.php"id="logo" src="images/pixel trading.png"></a> 
             <?php
@@ -151,6 +151,30 @@ function deleteAcc(){
 
     $result = $conn->query($sql);
     header('Location: logout.php');
+}
+///////////////////
+//Pop-up password//
+///////////////////
+function pop_up_password(){
+  ?>
+  <div class="form-popup" id="pop">
+    <form action="/action_page.php" class="form-container">
+      <h1>Login</h1>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Old Password" name="psw" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="New Password" name="psw" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Confirm Password" name="psw" required>
+
+      <button type="submit" class="btn">Login</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+<?php
 }
 
 
