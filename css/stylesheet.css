@@ -20,4 +20,55 @@ body{
     text-align: center;
 }
 
+h1{
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+h5{
+    color: white;
+}
+
+a:link, a:visited {
+ color: black;
+ text-decoration: none;
+  }
   
+  a:hover, a:active {
+    color: black;
+    text-decoration: none;
+  }
+
+.profile {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.profilepic {
+    border-radius: 50%;
+}
+
+.Settings {
+    background-color: #04471C;
+    position: absolute;
+    border: 1px solid #16DB65;
+    width: 1000px;
+    left: 250PX;
+    height: 790px;
+    border-radius: 40px;
+  }
+
+  #button {
+      background-color: #16DB65;
+      color: black;
+    transition-duration: 0.4s;
+  }
+  
+  #button:hover {
+    background-color: white; /* Green */
+    color: black;
+  }
