@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: rgb(8, 8, 8);
   font-family: Georgia, 'Times New Roman', Times, serif;
 
 
@@ -124,7 +124,10 @@ body {
   text-align: center;
   background-color: #16DB65;
 }
-
+.page-header{
+  position: relative;
+  left: 48%;
+}
 h2 {
   color: white;
 }
@@ -264,7 +267,7 @@ h2 {
   color: white;
 }
 
-h5 {
+h4 {
   color: white;
 }
 
@@ -281,10 +284,21 @@ a:active {
 }
 
 
-.profile {
+.profile  {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 64px;
+  right: 200px;
+}
+.profile h2 {
+  position: absolute;
+  top: -50px;
+  width: 400px;
+
+}
+.profile input {
+  position: absolute;
+  top: 179px;
+  height: 18px;
 }
 
 .profilepic {
@@ -334,7 +348,7 @@ a:active {
 
 .form-container {
   width: 300px;
-  padding: 10px;
+  padding: 20px;
   border: 3px solid #16DB65;
   background-color: #04AA6D;
   border-radius: 4px;
@@ -375,6 +389,9 @@ a:active {
 
 .form-container .cancel {
   background-color: rgb(0, 0, 0);
+}
+.form-container h1{
+  color: black;
 }
 
 .form-container .btn:hover,

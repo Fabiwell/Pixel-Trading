@@ -44,14 +44,8 @@ function closeForm() {
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-    <h1>Profile</h1>
-    <div class="profile">
-        <h2>Change Profile Picture</h2>
-        <a href="#" onclick="performClick('image-input');">
-            <img class="profilepic" src="images/blank-profile-picture-973460_1280.png" width="255" height="255">
-        </a>
-        <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
-    </div>
+    <h1 class="page-header">Profile</h1>
+    
     <?php
     pop_up_password();
     ?>
@@ -60,16 +54,24 @@ function closeForm() {
       <div class="Information">
         <h2>Information</h2> 
         <!-- iemand die back end doet moet even zorgen dat de correcte text hier komt te staan -Stan -->
-        <h5>E-mail</h5>
-        <h5>Password</h5>
-        <h5>Account Age</h5>
+        <h4>E-mail</h4>
+        <h4>Password</h4>
+        <h4>Account Age</h4>
         <h2>Settings</h2>
+
+        <div class="profile">
+        <h2>Change Profile Picture</h2>
+        <a href="#" onclick="performClick('image-input');">
+            <img class="profilepic" src="images/blank-profile-picture-973460_1280.png" width="255" height="255">
+        </a>
+        
+        </div>
 
         <form method="POST" action="profile.php">
 
           <input class="btnPfPage" type="submit" name="btnChangePass" value="Change Password" onclick="openForm()">
           <input class="btnPfPage" type="submit" name="btnDeleteAcc" value="Delete Account" onclick="Delete()">
-          <input class="btnPfPage" type="submit" name="btnChangePfp" value="Change Profile Picture">
+          <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
 
         </form>
 
