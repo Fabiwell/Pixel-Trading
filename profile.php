@@ -39,6 +39,7 @@
 
 ?>
 <script>
+
 //     function performClick(elemId) {
 //     var elem = document.getElementById(elemId);
 //     if(elem && document.createEvent) {
@@ -55,12 +56,16 @@ if(document. getElementById('buttonupload'). clicked == true)
 
 
 function openForm() {
-  document.getElementById("myForm").style.display = "block";
+  document.getElementById("myForm").style.display = "block"
+  event.preventDefault();
 }
 
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
+
+  
+
 </script>
 
 <!DOCTYPE html>
@@ -73,44 +78,42 @@ function closeForm() {
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-    <h1>Profile</h1>
-    <div class="profile">
+    <h1 class="page-header">Profile</h1>
+    
+    <?php
+    pop_up_password();
+    ?>
+    <div class="Settings">
+
+      <div class="Information">
+        <h2>Information</h2> 
+        <!-- iemand die back end doet moet even zorgen dat de correcte text hier komt te staan -Stan -->
+        <h4>E-mail</h4>
+        <h4>Password</h4>
+        <h4>Account Age</h4>
+        <h2>Settings</h2>
+
+        <div class="profile">
         <h2>Change Profile Picture</h2>
+
         <img id="profilepic" src="images/blank-profile-picture-973460_1280.png" width="255" height="255">
     </div>
     <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
     <h1>Login</h1>
 
-    <label for="email"><b>Old Password</b></label>
-    <input type="text" placeholder="Old Password" name="psw" required>
 
-    <label for="psw"><b>New Password</b></label>
-    <input type="password" placeholder="New Password" name="psw" required>
-    
-    <label for="psw"><b>Confirm New Password</b></label>
-    <input type="password" placeholder="Confirm New Password" name="psw" required>
-
-    <button type="submit" class="btn">Confirm Change</button>
-    <button type="button" class="btn cancel" onclick="">Cancel</button>
-  </form>
-</div>
-    <div class="Settings">
-        <div class="Information">
-        <h2>Information</h2> 
-        <!-- iemand die back end doet moet even zorgen dat de correcte text hier komt te staan -Stan -->
-        <h5>E-mail</h5>
-        <h5>Password</h5>
-        <h5>Account Age</h5>
-        <h2>Settings</h2>
         <form method="POST" action="profile.php" enctype="multipart/form-data">
-        <input id="button" type="submit" name="btnChangePass" value="Change Password" onclick="openForm()">
-        <input id="button" type="submit" name="btnDeleteAcc" value="Delete Account" onclick="Delete()">
-        <input id="buttonupload" type="submit" name="upload" value="Change Profile Picture">
-        <input type="file" name="image-input" accept="image/jpeg, image/png, image/jpg">
+
+          <input class="btnPfPage" type="submit" name="btnChangePass" value="Change Password" onclick="openForm()">
+          <input class="btnPfPage" type="submit" name="btnDeleteAcc" value="Delete Account" onclick="Delete()">
+          <input id="buttonupload" type="submit" name="upload" value="Change Profile Picture">()
+          <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+
         </form>
-</div>
-</div>
+
+      </div>
+    </div>
 </body>
 </html>
 
