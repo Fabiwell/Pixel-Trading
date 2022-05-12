@@ -11,6 +11,32 @@
         header("Refresh:0");
     }
 
+    $msg = "";
+    $db = mysqli_connect("localhost", "root", "", "pixel_trading");
+    // If upload button is clicked ...
+    if (isset($_POST['upload'])) {
+  
+      $filename = $_FILES["image-input"]["name"];
+      $tempname = $_FILES["image-input"]["tmp_name"];   
+          $folder = "upload/".$filename;
+          
+      
+  
+          // Get all the submitted data from the form
+          $sql = "INSERT INTO upload (filename) VALUES ('$filename')";
+  
+          // Execute query
+          mysqli_query($db, $sql);
+          
+          // Now let's move the uploaded image into the folder: image
+          if (move_uploaded_file($tempname, $folder))  {
+              $msg = "Image uploaded successfully";
+          }else{
+              $msg = "Failed to upload image";
+        }
+    }
+    $result = mysqli_query($db, "SELECT * FROM upload");
+
 ?>
 <script>
   function performClick(elemId) {
@@ -62,7 +88,7 @@ function closeForm() {
         <div class="profile">
         <h2>Change Profile Picture</h2>
         <a href="#" onclick="performClick('image-input');">
-            <img class="profilepic" src="images/blank-profile-picture-973460_1280.png" width="255" height="255">
+            <img id="profilepic" onmouseover="this.src='images/hover-pfp.png'" onmouseout="this.src='images/blank-profile-picture-973460_1280.png'" src="images/blank-profile-picture-973460_1280.png" width="255" height="255">
         </a>
         
         </div>
