@@ -293,8 +293,8 @@ a:active {
   height: 18px;
 }
 
-.profilepic {
-  border-radius: 50%;
+#profilepic {
+    border-radius: 50%;
 }
 
 .Settings {
